@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "description": "The cli for generating javascript package.",
   "main": "index.js",
+  "bin": {
+    "pkg": "./src/cli.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,5 +14,17 @@
     "package"
   ],
   "author": "advancedcat",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/clear": "^0.1.1",
+    "chalk": "^4.1.1",
+    "clear": "^0.1.0",
+    "commander": "^7.2.0",
+    "download-git-repo": "^3.0.2",
+    "figlet": "^1.5.0",
+    "open": "^8.0.8",
+    "ora": "^5.4.0",
+    "watch": "^1.0.2"
+  }
 }
