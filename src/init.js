@@ -1,14 +1,13 @@
-const {promisify} = require('util')
-const figlet = promisify(require('figlet'))
 const clear = require('clear')
 const chalk = require('chalk')
 const {clone} = require('./download')
-const log = (content) => console.log(chalk.green(content))
+const pkgJson = require('../package.json')
+const log = (...args) => console.log(chalk.green(...args))
 
 module.exports = async pkgName => {
     clear()
-    const data = await figlet('PKG-CLI')
-    log(data)
+
+    log('pkg-cli', `v${pkgJson.version}`)
 
     if(!pkgName){
         log('Please specify the dir.')
