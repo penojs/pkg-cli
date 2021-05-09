@@ -1,11 +1,14 @@
 #!/usr/bin/env node
 
 const program = require('commander')
-program.version(require('../package.json').version)
+const version = require('../lib/version')
+program.version(version)
 
 program
-    .command('init <name>')
-    .description('init project')
+    .command('init <pkg-name>')
+    .description('generate a project from a remote template')
+    .option('-t --template', 'Use specific template')
+    .option('-c --clone', 'Use git clone when fetching remote template')
     .action(require('../lib/init'))
 
 program.parse(process.argv)
