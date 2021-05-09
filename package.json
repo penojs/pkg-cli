@@ -4,7 +4,7 @@
   "description": "The cli for generating javascript package.",
   "main": "index.js",
   "bin": {
-    "pkg": "./src/cli.js"
+    "pkg": "./bin/pkg.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
