@@ -7,6 +7,8 @@
     "pkg": "./bin/pkg.js"
   },
   "scripts": {
+    "lint": "eslint bin/*.js lib/**/*.js",
+    "prepare": "husky install",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -30,5 +32,15 @@
     "ora": "^5.4.0",
     "rimraf": "^3.0.2",
     "watch": "^1.0.2"
+  },
+  "devDependencies": {
+    "@types/eslint": "^7.2.10",
+    "eslint": "^7.26.0",
+    "husky": "^6.0.0"
+  },
+  "lint-staged": {
+    "(bin|lib)/*.js": [
+      "eslint"
+    ]
   }
 }
