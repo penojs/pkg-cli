@@ -9,7 +9,7 @@ async function run(){
         silent: true
     })
 
-    await runCommand('ls -lh', {
+    await runCommand('ls     -l   -h', {
         cwd: path.resolve('./lib'),
     })
 
