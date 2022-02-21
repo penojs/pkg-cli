@@ -2,7 +2,7 @@
 
 const program = require('commander')
 const version = require('../lib/version')
-program.version(version)
+program.version(version, '-v, --version', 'output the current version')
 
 program
   .command('init <pkg-name>')
